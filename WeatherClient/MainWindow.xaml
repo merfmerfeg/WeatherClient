@@ -1,0 +1,25 @@
+﻿<Window x:Class="WeatherClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeatherClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="347" Width="695" ResizeMode="NoResize" >
+    <Grid Margin="0,0,4,5">
+        <ComboBox x:Name="ComboBox" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top" Width="339" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="Выберете город:" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="CityName" x:Name="CityName" Foreground="BlueViolet" HorizontalContentAlignment="Center"  HorizontalAlignment="Center" Margin="10,58,10,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="665"/>
+        <Label Content="Облачность, осадки" x:Name="Phenoma" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="10,116,10,0" VerticalAlignment="Top" FontSize="16" Width="665"/>
+        <Label Content="Температура воздуха: ??" x:Name="Temp" HorizontalAlignment="Left" Margin="48,168,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="Температура воздуха, по ощущению: ??" x:Name="TempFeel" HorizontalAlignment="Left" Margin="48,206,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="Скорость ветра: ??" x:Name="Wind" HorizontalAlignment="Left" Margin="48,249,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="Влажность воздуха: ??" x:Name="Relwet" HorizontalAlignment="Left" Margin="392,168,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="Атмосферное давление: ??" x:Name="Pressure" HorizontalAlignment="Left" Margin="392,206,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label Content="Обновлено: 01.01.2018 15:00" x:Name="UpdateDateTime" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Прогноз на: " x:Name="DateForecast" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,58,0,0" TextWrapping="Wrap" Text="Обновить" TextDecorations="Underline" Cursor="Hand" Foreground="Blue" VerticalAlignment="Top" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+        <Label Background="LightGray" x:Name="Load" HorizontalContentAlignment="Center" Visibility="Hidden" VerticalContentAlignment="Center"  Content="Загрузка..." HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="271" Width="665" FontSize="48"/>
+
+    </Grid>
+</Window>
